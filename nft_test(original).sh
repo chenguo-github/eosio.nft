@@ -24,7 +24,7 @@ ${cleos} wallet create
 
 
 echo "---------------- Import Test Key! ----------------";
-${cleos} wallet import 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+${cleos} wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
 
 echo "---------------- Create Test Account! ----------------";
