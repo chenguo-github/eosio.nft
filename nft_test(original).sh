@@ -20,7 +20,7 @@ docker-compose up -d
 
 
 echo "---------------- Create A Wallet! ----------------";
-${cleos} wallet create
+${cleos} wallet create --to-console
 
 
 echo "---------------- Import Test Key! ----------------";
@@ -101,63 +101,6 @@ echo "=== EDOG table: ===";
 ${cleos} get table eosio.nft123 EDOG stat
 echo "=== ZOD table: ===";
 ${cleos} get table eosio.nft123 ZOD stat
-
-
-
-echo "---------------- Clear Balance! ----------------";
-${cleos} push action eosio.nft123 clearbalance '[ "12345tester3", "1 EDOG" ]' -p eosio.nft123
-echo "---------------- Get Table Info! ----------------";
-echo "=== token table: ===";
-${cleos} get table eosio.nft123 eosio.nft123 token
-echo "=== 12345tester1 table: ===";
-${cleos} get table eosio.nft123 12345tester1 accounts
-echo "=== 12345tester2 table: ===";
-${cleos} get table eosio.nft123 12345tester2 accounts
-echo "=== 12345tester3 table: ===";
-${cleos} get table eosio.nft123 12345tester3 accounts
-echo "=== EDOG table: ===";
-${cleos} get table eosio.nft123 EDOG stat
-echo "=== ZOD table: ===";
-${cleos} get table eosio.nft123 ZOD stat
-
-
-
-echo "---------------- Clear Balance! ----------------";
-${cleos} push action eosio.nft123 clearsymbol '[ "0 ZOD" ]' -p eosio.nft123
-echo "---------------- Get Table Info! ----------------";
-echo "=== token table: ===";
-${cleos} get table eosio.nft123 eosio.nft123 token
-echo "=== 12345tester1 table: ===";
-${cleos} get table eosio.nft123 12345tester1 accounts
-echo "=== 12345tester2 table: ===";
-${cleos} get table eosio.nft123 12345tester2 accounts
-echo "=== 12345tester3 table: ===";
-${cleos} get table eosio.nft123 12345tester3 accounts
-echo "=== EDOG table: ===";
-${cleos} get table eosio.nft123 EDOG stat
-echo "=== ZOD table: ===";
-${cleos} get table eosio.nft123 ZOD stat
-
-
-
-echo "---------------- Clear Tokens! ----------------";
-${cleos} push action eosio.nft123 cleartokens '[]' -p eosio.nft123
-echo "---------------- Get Table Info! ----------------";
-echo "=== token table: ===";
-${cleos} get table eosio.nft123 eosio.nft123 token
-echo "=== 12345tester1 table: ===";
-${cleos} get table eosio.nft123 12345tester1 accounts
-echo "=== 12345tester2 table: ===";
-${cleos} get table eosio.nft123 12345tester2 accounts
-echo "=== 12345tester3 table: ===";
-${cleos} get table eosio.nft123 12345tester3 accounts
-echo "=== EDOG table: ===";
-${cleos} get table eosio.nft123 EDOG stat
-echo "=== ZOD table: ===";
-${cleos} get table eosio.nft123 ZOD stat
-
-
-
 
 
 
